@@ -5,10 +5,9 @@ Analysis of android open source project, include usage and implementation,About 
 
 ### 1. 简介
 
-**功能介绍：**
-	引用[viewpagerindicator](http://viewpagerindicator.com)项目主页的简短介绍：
-	ViewPager适用于Android Support Library中的ViewPager和其开发的ActionBarSherlock，项目基于Patrik Åkerfeldt's ViewFlow。  
-	应用于各种界面的导航。  
+**功能介绍：**  
+引用[viewpagerindicator](http://viewpagerindicator.com)项目主页的简短介绍：ViewPager适用于Android Support Library中的ViewPager和其开发的ActionBarSherlock，项目基于Patrik Åkerfeldt's ViewFlow。  
+应用于各种界面的导航。  
 	
 
 ### 2. 主要特点：
@@ -96,12 +95,12 @@ Google官方中文文档翻译项目地址：[android-training-course-in-chinese
 **3. 确保操作中的点的ID(the active pointer ID)不会引用已经不在触摸屏上的触摸点**  
 当ACTION_POINTER_UP事件发生时，示例程序会移除对该点的索引值的引用，确保操作中的点的ID(the active pointer ID)不会引用已经不在触摸屏上的触摸点。这种情况下，app会选择另一个触摸点来作为操作中(active)的点，并保存它当前的x、y值。由于在ACTION_MOVE事件时，这个保存的位置会被用来计算屏幕上的对象将要移动的距离，所以app会始终根据正确的触摸点来计算移动的距离。
 
-	ViewPagerIndicator中的onTouchEvent中的代码也就是官方文档的模板代码，就是为了确保以上几点，拿到可用，确信的点然后处理ViewPager相应的偏移和滑动
+ViewPagerIndicator中的onTouchEvent中的代码也就是官方文档的模板代码，就是为了确保以上几点，拿到可用，确信的点然后处理ViewPager相应的偏移和滑动
 
-**核心函数**
-	onDraw、onTouchEvent
+**核心函数**  
+onDraw  onTouchEvent
 
-	这里就算对ViewPagerIndicator的实现原理介绍完毕了。可能大家说我图懒省事，其实并不然。第一，关于自定义控件的知识点并不是一下就能说清楚的。其内容之多，这里根本无法做详细的介绍。如果你把这些基础看明白了，一定会知道ViewPagerIndicator是如何实现的，其实该项目并不复杂。另外对于自定义控件的这些知识是非常重要的，真心想学习的同学，一定会认真研究这些基本的知识点，并做下笔记，因为在以后的学习或者研读其它优秀开源项目的时候，一定会遇到这些知识。
+这里就算对ViewPagerIndicator的实现原理介绍完毕了。可能大家说我图懒省事，其实并不然。第一，关于自定义控件的知识点并不是一下就能说清楚的。其内容之多，这里根本无法做详细的介绍。如果你把这些基础看明白了，一定会知道ViewPagerIndicator是如何实现的，其实该项目并不复杂。另外对于自定义控件的这些知识是非常重要的，真心想学习的同学，一定会认真研究这些基本的知识点，并做下笔记，因为在以后的学习或者研读其它优秀开源项目的时候，一定会遇到这些知识。
 	
 **授人以鱼不如授人以渔。真正学到的，才是自己的**
 
