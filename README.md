@@ -2,7 +2,8 @@ open-project-analysis
 =====================
 
 Analysis of android open source project, include usage and implementation,About more,https://github.com/android-cn/android-open-project-analysis
-# 简介
+
+#### 简介
 
 **功能介绍：**
 	引用ViewPagerIndicator项目主页的简短介绍：
@@ -11,11 +12,11 @@ Analysis of android open source project, include usage and implementation,About 
 
 	CirclePageIndicator ：形状为circle，常见于图片的导航，各大应用的广告条中。
 
-# 主要特点：
+#### 主要特点：
 	* 使用简单
 	* 效果好
 
-# 详细设计
+#### 详细设计
 	
 	##核心类：
 		**归类：**
@@ -38,28 +39,28 @@ Analysis of android open source project, include usage and implementation,About 
 		已经有好心人把它翻译了：一个GitHub协作项目android-training-course-in-chinese，该项目就是对Google的官方文档进行翻译，现已有PDF版本了，大家可以
 		去下载。（强烈建议大家直接去下载。然后慢慢咀嚼，一定会Android的整体知识架构有清晰的认识。我觉得特别有帮助，最好的学习资料莫过官方文档）
 		
-		Google官方中文文档翻译项目地址：[android-training-course-in-chinese](https://github.com/kesenhoo/android-training-course-in-chinese )
+		Google官方中文文档翻译项目地址：[android-training-course-in-chinese](https://github.com/kesenhoo/android-training-course-in-chinese)
 
 		
 		下面就简单的介绍一下整个流程:
 		（以下的分析中就直接引用了其中的一些篇章前言，具体内容大家直接点击链接就可以看到，这里就不再赘述，建议大家做下笔记，内容还是比较多的）
 
 		1. **自定义控件创建步骤：**
-			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/index.html )
+			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/index.html) 
 			继承一个View。
 			定义自定义的属性（外观与行为）。
 			应用自定义的属性。
 			添加属性和事件。
 
 		2. **自定义View的绘制：**
-			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/custom-draw.html )
+			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/custom-draw.html)
 
 				自定义view的最重要的一个部分是自定义它的外观。根据你的程序的需求，自定义绘制动作可能简单也可能很复杂。
 			重绘一个自定义的view的最重要的步骤是重写onDraw()方法。onDraw()的参数是一个Canvas对象。Canvas类定义了绘制文本，线条，图像与许多其他图形的方法。
 			你可以在onDraw方法里面使用那些方法来创建你的UI。
 
 		3. **使View可交互**
-			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/make-interactive.html )
+			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/make-interactive.html)
 
 			绘制UI仅仅是创建自定义View的一部分。你还需要使得你的View能够以模拟现实世界的方式来进行反馈。Objects应该总是与现实情景能够保持一致。
 			用户应该可以感受到UI上的微小变化，并对这些变化反馈到现实世界中。例如，当用户做fling(迅速滑动)的动作，应该在滑动开始与结束的时候给用户一定的反馈。
@@ -67,11 +68,11 @@ Analysis of android open source project, include usage and implementation,About 
 			在Android中最常用的输入事件是touch，它会触发onTouchEvent(android.view.MotionEvent))的回调。重写这个方法来处理touch事件：
 
 		4. **Android的用户输入**
-			[链接](http://hukai.me/android-training-course-in-chinese/best-user-input.html )
+			[链接](http://hukai.me/android-training-course-in-chinese/best-user-input.html)
 
 
 		这里着重要看一下拖拽与缩放这一部分。因为在ViewPagerIndicator的几种实现：Circle，Title，UnderLine的onTouchEvent里的处理逻辑是一样的，而且和官方文档中的
-		代码逻辑也是一样的，看了讲解之后，相信大家就会有所了解了：[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html )
+		代码逻辑也是一样的，看了讲解之后，相信大家就会有所了解了：[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)
 
 
 **TabPageIndicator、IconPageIndicator**
@@ -104,7 +105,7 @@ Analysis of android open source project, include usage and implementation,About 
 		    例如触摸屏幕上的元素时。
 
 	**onTouchEvent:**
-		对于pointer的处理是模板方法，在拖拽与缩放中有详细的讲解：[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html )
+		对于pointer的处理是模板方法，在拖拽与缩放中有详细的讲解：[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)
 	
 	要注意的有以下几点（结合原文以及代码，立马清晰了）：
 		
@@ -134,7 +135,7 @@ Analysis of android open source project, include usage and implementation,About 
 	
 	授人以鱼不如授人以渔。真正学到的，才是自己的。
 
-# 使用方法
+#### 使用方法
 
 	在你的布局文件中，需要导航的位置添加类似如下代码：
 ```
