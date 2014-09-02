@@ -6,11 +6,10 @@ Analysis of android open source project, include usage and implementation,About 
 ### 1. 简介
 
 **功能介绍：**
-	引用ViewPagerIndicator项目主页的简短介绍：
-	ViewPager适用于Android Support Library中的ViewPager和其开发的ActionBarSherlock，项目基于Patrik Åkerfeldt's ViewFlow。
-	[viewpagerindicator](http://viewpagerindicator.com) 
-
-	CirclePageIndicator ：形状为circle，常见于图片的导航，各大应用的广告条中。
+	引用[viewpagerindicator](http://viewpagerindicator.com)项目主页的简短介绍：
+	ViewPager适用于Android Support Library中的ViewPager和其开发的ActionBarSherlock，项目基于Patrik Åkerfeldt's ViewFlow。  
+	应用于各种界面的导航。  
+	
 
 ### 2. 主要特点：
 	* 使用简单
