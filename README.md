@@ -14,21 +14,21 @@ Analysis of android open source project, include usage and implementation,About 
 
 #### 主要特点：
 	* 使用简单
-	* 效果好
+	* 效果好 
 
 #### 详细设计
 	
 	##核心类：
-		**归类：**
+		**归类**
 			CirclePageIndicator、LinePageIndicator、UnderlinePageIndicator 这三种是极其相似的。可以归为一类。
 			TabPageIndicator、IconPageIndicator 继承自HorizontalScrollView，极其相似，可以归为一类。
 			TitlePagerIndicator：实现最复杂,单独介绍。
 		
-		**结构：**
+		**结构**
 			PageIndicator，接口类，定义了不同类型的Indicator的公用的方法。
 			IcsLinearLayout ：LinearLayout的扩展，支持了4.0以上的divider特性。在TabPagerIndicator中使用到。
 
-		**实现：**
+		**实现**
 
 		这里先介绍两个模块：自定义控件的创建和Android的用户输入。
 
@@ -105,8 +105,8 @@ Analysis of android open source project, include usage and implementation,About 
 		    例如触摸屏幕上的元素时。
 
 	**onTouchEvent:**
-		对于pointer的处理是模板方法，在拖拽与缩放中有详细的讲解：[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)
-	
+		对于pointer的处理是模板方法，在拖拽与缩放中有详细的讲解：
+	[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)
 	要注意的有以下几点（结合原文以及代码，立马清晰了）：
 		
 	1. 保持对最初点的追踪
