@@ -40,22 +40,20 @@ Google官方中文文档翻译项目地址：[android-training-course-in-chinese
 下面就简单的介绍一下整个流程:
 		（以下的分析中就直接引用了其中的一些篇章前言，具体内容大家直接点击链接就可以看到，这里就不再赘述，建议大家做下笔记，内容还是比较多的）
 
-1. [自定义控件创建步骤](http://hukai.me/android-training-course-in-chinese/ui/custom-view/index.html) ：
-	继承一个View。
-	定义自定义的属性（外观与行为）。
-	应用自定义的属性。
-	添加属性和事件。
+1. [自定义控件创建步骤](http://hukai.me/android-training-course-in-chinese/ui/custom-view/index.html) ：  
+	* 继承一个View。
+	* 定义自定义的属性（外观与行为）。
+	* 应用自定义的属性。
+	* 添加属性和事件。
 
-2. [自定义View的绘制](http://hukai.me/android-training-course-in-chinese/ui/custom-view/custom-draw.html)
-				自定义view的最重要的一个部分是自定义它的外观。根据你的程序的需求，自定义绘制动作可能简单也可能很复杂。
+2. [自定义View的绘制](http://hukai.me/android-training-course-in-chinese/ui/custom-view/custom-draw.html)  
+自定义view的最重要的一个部分是自定义它的外观。根据你的程序的需求，自定义绘制动作可能简单也可能很复杂。
 重绘一个自定义的view的最重要的步骤是重写onDraw()方法。onDraw()的参数是一个Canvas对象。Canvas类定义了绘制文本，线条，图像与许多其他图形的方法。你可以在onDraw方法里面使用那些方法来创建你的UI。
 
-3. [使View可交互](http://hukai.me/android-training-course-in-chinese/ui/custom-view/make-interactive.html)
-
+3. [使View可交互](http://hukai.me/android-training-course-in-chinese/ui/custom-view/make-interactive.html)  
 绘制UI仅仅是创建自定义View的一部分。你还需要使得你的View能够以模拟现实世界的方式来进行反馈。Objects应该总是与现实情景能够保持一致。用户应该可以感受到UI上的微小变化，并对这些变化反馈到现实世界中。例如，当用户做fling(迅速滑动)的动作，应该在滑动开始与结束的时候给用户一定的反馈。像许多其他UI框架一样，Android提供一个输入事件模型。在Android中最常用的输入事件是touch，它会触发onTouchEvent(android.view.MotionEvent))的回调。重写这个方法来处理touch事件：
 
-4. [Android的用户输入](http://hukai.me/android-training-course-in-chinese/best-user-input.html)
-
+4. [Android的用户输入](http://hukai.me/android-training-course-in-chinese/best-user-input.html)  
 这里着重要看一下拖拽与缩放这一部分。因为在ViewPagerIndicator的几种实现：Circle，Title，UnderLine的onTouchEvent里的处理逻辑是一样的，而且和官方文档中的代码逻辑也是一样的，看了讲解之后，相信大家就会有所了解了：http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html
 
 
@@ -64,7 +62,7 @@ Google官方中文文档翻译项目地址：[android-training-course-in-chinese
 继承自HorizontalScrollView,使用了IcsLinearLayout
 继承自HorizontalScrollView，拥有其左右滑动的效果，以及其它以实现的操作，比如对child的measure
 
-**IconPageIndicator:**  
+**IconPageIndicator**  
 	notifyDataSetChanged：
 		像IcsLinearLayout中添加child,同时请求requestLayout(),该方法会触发measure和layout这两个步骤，measure是测绘每个看控件的大小，layout是为了给每个View确定好位置，有了大小和位置后，接下来就是draw了。
 
@@ -82,7 +80,7 @@ Google官方中文文档翻译项目地址：[android-training-course-in-chinese
 
 **CirclePageIndicator、LinePageIndicator、UnderlinePageIndicator**
 
-**mTouchSlop：**  
+**mTouchSlop**  
 	“Touch slop”是指在用户触摸事件可被识别为移动手势前,移动过的那一段像素距离。Touchslop通常用来预防用户在做一些其他操作时意外地滑动，例如触摸屏幕上的元素时。
 
 [onTouchEvent](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)		
@@ -101,12 +99,12 @@ Google官方中文文档翻译项目地址：[android-training-course-in-chinese
 
 	ViewPagerIndicator中的onTouchEvent中的代码也就是官方文档的模板代码，就是为了确保以上几点，拿到可用，确信的点然后处理ViewPager相应的偏移和滑动
 
-**核心函数：**
+**核心函数**
 	onDraw、onTouchEvent
 
 	这里就算对ViewPagerIndicator的实现原理介绍完毕了。可能大家说我图懒省事，其实并不然。第一，关于自定义控件的知识点并不是一下就能说清楚的。其内容之多，这里根本无法做详细的介绍。如果你把这些基础看明白了，一定会知道ViewPagerIndicator是如何实现的，其实该项目并不复杂。另外对于自定义控件的这些知识是非常重要的，真心想学习的同学，一定会认真研究这些基本的知识点，并做下笔记，因为在以后的学习或者研读其它优秀开源项目的时候，一定会遇到这些知识。
 	
-**授人以鱼不如授人以渔。真正学到的，才是自己的。**
+**授人以鱼不如授人以渔。真正学到的，才是自己的**
 
 ### 4. 使用方法
 
