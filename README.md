@@ -45,21 +45,21 @@ Analysis of android open source project, include usage and implementation,About 
 		下面就简单的介绍一下整个流程:
 		（以下的分析中就直接引用了其中的一些篇章前言，具体内容大家直接点击链接就可以看到，这里就不再赘述，建议大家做下笔记，内容还是比较多的）
 
-		1. **自定义控件创建步骤：**
+		1. 自定义控件创建步骤：
 			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/index.html) 
 			继承一个View。
 			定义自定义的属性（外观与行为）。
 			应用自定义的属性。
 			添加属性和事件。
 
-		2. **自定义View的绘制：**
+		2. 自定义View的绘制：
 			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/custom-draw.html)
 
 				自定义view的最重要的一个部分是自定义它的外观。根据你的程序的需求，自定义绘制动作可能简单也可能很复杂。
 			重绘一个自定义的view的最重要的步骤是重写onDraw()方法。onDraw()的参数是一个Canvas对象。Canvas类定义了绘制文本，线条，图像与许多其他图形的方法。
 			你可以在onDraw方法里面使用那些方法来创建你的UI。
 
-		3. **使View可交互**
+		3. 使View可交互
 			[链接](http://hukai.me/android-training-course-in-chinese/ui/custom-view/make-interactive.html)
 
 			绘制UI仅仅是创建自定义View的一部分。你还需要使得你的View能够以模拟现实世界的方式来进行反馈。Objects应该总是与现实情景能够保持一致。
@@ -67,7 +67,7 @@ Analysis of android open source project, include usage and implementation,About 
 			像许多其他UI框架一样，Android提供一个输入事件模型。
 			在Android中最常用的输入事件是touch，它会触发onTouchEvent(android.view.MotionEvent))的回调。重写这个方法来处理touch事件：
 
-		4. **Android的用户输入**
+		4. Android的用户输入
 			[链接](http://hukai.me/android-training-course-in-chinese/best-user-input.html)
 
 
@@ -101,10 +101,10 @@ Analysis of android open source project, include usage and implementation,About 
 
 **CirclePageIndicator、LinePageIndicator、UnderlinePageIndicator**
 
-	**mTouchSlop：** “Touch slop”是指在用户触摸事件可被识别为移动手势前,移动过的那一段像素距离。Touch slop通常用来预防用户在做一些其他操作时意外地滑动，
+	mTouchSlop： “Touch slop”是指在用户触摸事件可被识别为移动手势前,移动过的那一段像素距离。Touch slop通常用来预防用户在做一些其他操作时意外地滑动，
 		    例如触摸屏幕上的元素时。
 
-	**onTouchEvent:**
+	onTouchEvent:
 		对于pointer的处理是模板方法，在拖拽与缩放中有详细的讲解：
 	[链接](http://hukai.me/android-training-course-in-chinese/input/gestures/scale.html)
 	要注意的有以下几点（结合原文以及代码，立马清晰了）：
